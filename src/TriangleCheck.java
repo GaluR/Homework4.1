@@ -5,7 +5,7 @@ public class TriangleCheck {
         triangle = t;
     }
     boolean isRightTriangle (){
-        boolean isFalse = triangle.doMultiply(triangle.side1)+ triangle.doMultiply(triangle.side2) != triangle.doMultiply(triangle.side3);
+        boolean isFalse = triangle.doMultiply(triangle.side1)+ triangle.doMultiply(triangle.side2) != triangle.doMultiply(triangle.longestSide3);
         return isFalse != true;
     }
 }
