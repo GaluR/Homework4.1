@@ -1,14 +1,11 @@
 public class TriangleCheck {
 
     boolean isRightTriangle (Triangle triangle){
-        if(triangle.longestSide3 > triangle.side1 && triangle.longestSide3 > triangle.side2) {
-            boolean isFalse = doMultiply(triangle.side1) + doMultiply(triangle.side2) != doMultiply(triangle.longestSide3);
-            return isFalse!=true;
-        }
-        else{
-            System.out.println("Złe dane. Najdłuższy bok trójkąta proszę wpisać jako ostatnią wartość!");
-        }
-        return false;
+
+            boolean isRectangular1 = !(doMultiply(triangle.side1) + doMultiply(triangle.side2) != doMultiply(triangle.side3));
+            boolean isRectangular2 = !(doMultiply(triangle.side3) + doMultiply(triangle.side2) != doMultiply(triangle.side1));
+            boolean isRectangular3 = !(doMultiply(triangle.side1) + doMultiply(triangle.side3) != doMultiply(triangle.side2));
+            return isRectangular1 || isRectangular2 || isRectangular3;
     }
 
     double doMultiply(double a){
